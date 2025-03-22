@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <title>Semangat untuk Hari Ini!</title>
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optimize CSS -->
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+    />
+
+    <script src="./js/scripts.js" defer></script>
+  </head>
+  <body>
+    <main role="main">
+      <center id="letter" class="letter">
+        <div class="mail-card">
+          <header role="banner">
+            <p>Hai! Isi dulu nama kamu buat baca surat ini.</p>
+            <span aria-hidden="true">🕊️</span>
+          </header>
+
+          <form id="nameForm">
+            <label for="username">Nama kamu:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              aria-required="true"
+              required
+            />
+            <button type="submit" aria-label="Buka Surat">Buka ➡️</button>
+          </form>
+        </div>
+      </center>
+
+      <div id="card" class="card" style="display: none">
+        <header>
+          <h1>Refleksi Diri</h1>
+          <p>
+            Luangkan waktu sejenak untuk menghargai perjalanan yang telah
+            dilalui.
+          </p>
+        </header>
+        <section>
+          <h2>Untuk <span id="recipientName">diriku sendiri</span>,</h2>
+          <p>
+            Terima kasih sudah berusaha sejauh ini. Tidak apa-apa jika
+            perjalanan tidak selalu mudah, yang terpenting adalah tetap
+            melangkah. Tetap percaya pada proses, jaga kesehatan, dan jangan
+            lupa beristirahat. Setiap langkah kecil tetap berarti.
+          </p>
+        </section>
+        <footer role="contentinfo">
+          <img
+            src="images/chibird.png"
+            alt="Illustration of encouragement"
+            loading="lazy"
+          />
+          <span> Made with 💝 just for you. </span>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>

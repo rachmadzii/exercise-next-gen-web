@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* ===== Colors ===== */
+  --primary-color: #12afd3;
+  --secondary-color: #44c6e2;
+  --background-color: #aef4fe;
+  --card-background: #ffffff;
+  --section-background: #e9fbff;
+  --text-color: #010103;
+  --text-light: #fefeff;
+  --button-color: #85dcf5;
+  --button-text-color: #0081a1;
+
+  /* ===== Fonts ===== */
+  --font-primary: 'Poppins', serif;
+  --font-secondary: 'Dancing Script', serif;
+
+  /* ===== Spacing ===== */
+  --spacing-large: 48px;
+  --spacing-medium: 32px;
+  --spacing-small: 24px;
+  --spacing-xsmall: 20px;
+
+  /* ===== Borders ===== */
+  --border-radius: 32px;
+  --border-radius-small: 16px;
+  --border-width: 4px;
+
+  /* ===== Shadows ===== */
+  --shadow: 12px 12px 0px #009fc6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  font-family: var(--font-primary);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-large);
+}
+
+/* Front Letter */
+.letter {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  padding-bottom: var(--spacing-large);
+}
+
+.letter h3 {
+  color: var(--button-text-color);
+  padding-bottom: var(--spacing-large);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Mail Card - Front Letter */
+.mail-card {
+  display: flex;
+  row-gap: var(--spacing-xsmall);
+  padding: var(--spacing-xsmall);
+  width: 400px;
+  border-radius: var(--border-radius-small);
+  background: var(--card-background);
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.mail-card header {
+  color: var(--text-light);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-small);
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mail-card header p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 0;
+  text-align: left;
+}
+
+.mail-card header span {
+  font-size: 40px;
+}
+
+.mail-card button {
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius-small);
+  font-family: var(--font-primary);
+}
+
+/* Letter Card - Main Letter */
+.card {
+  display: flex;
+  row-gap: var(--spacing-small);
+  padding: var(--spacing-small);
+  max-width: 700px;
+  min-height: 100vh;
+  border-radius: var(--border-radius);
+  background: var(--card-background);
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+header {
+  color: var(--text-light);
+  padding: var(--spacing-large) var(--spacing-small);
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-family: var(--font-secondary);
+  margin-bottom: var(--spacing-xsmall);
+}
+
+header p {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+section {
+  border-radius: var(--border-radius);
+  padding-block: var(--spacing-medium);
+  padding-inline: var(--spacing-small);
+  background-color: var(--section-background);
+  color: var(--text-color);
+}
+
+section h2 {
+  font-family: var(--font-secondary);
+  color: var(--primary-color);
+  letter-spacing: 3px;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+section p {
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+footer {
+  display: flex;
+  row-gap: 22px;
+  flex-direction: column;
+}
+
+footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--secondary-color);
+}
+
+footer span {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+/* Default styles for larger screens */
+dotlottie-player {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 790px) {
+  body {
+    font-family: var(--font-primary);
+  }
+
+  dotlottie-player {
+    width: 100%;
+    height: 100%;
+  }
+
+  main {
+    padding: 16px var(--spacing-small) var(--spacing-small) 16px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .letter {
+    padding: var(--spacing-medium) 0 0;
+    height: 100%;
+  }
+
+  .letter h3 {
+    padding-bottom: var(--spacing-medium);
+  }
+
+  .mail-card header {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .mail-card header span {
+    font-size: 40px;
+    position: relative;
+    left: -7px;
+    top: -8px;
+  }
+
+  .mail-card,
+  .card {
+    width: 100%;
+  }
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
